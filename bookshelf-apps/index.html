@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <link rel="icon" href="assets/img/logo.png">
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bookshelf App</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/style/style.css">
+</head>
+
+<body>
+  <header class="head_bar" id="head_bar">
+    <h1 class="head_bar__title">Bookshelf  <span style="color: #e76f51;">Apps</span></h1>
+
+  
+    <div class="logo">
+      <i class="fas fa-book"></i>
+    </div>
+
+    <a href="" id="mode">Dark Mode</a>
+    
+  </header>
+  <main>
+    <section class="ilustrasi">
+      <img src="assets/img/juicy.gif" alt="juicy">
+    </section>
+
+    <section class="input_section" id="input_section">
+      <h2>Masukkan Buku Baru</h2>
+      <form id="inputBook">
+        <div class="input">
+          <label for="inputBookTitle"></label>
+          <input id="inputBookTitle" placeholder="Judul" type="text" required>
+        </div>
+        <div class="input">
+          <label for="inputBookAuthor"></label>
+          <input id="inputBookAuthor" placeholder="Penulis" type="text" required>
+        </div>
+        <div class="input">
+          <label for="inputBookYear"></label>
+          <input id="inputBookYear" placeholder="Tahun" type="number" required>
+        </div>
+        <div class="input_inline">
+          <label for="inputBookIsComplete">Selesai dibaca</label>
+          <input id="inputBookIsComplete" type="checkbox">
+        </div>
+        <button id="bookSubmit" type="submit">Tambah Buku</button>
+      </form>
+    </section>
+
+    
+
+    <section class="book_shelf" id="book_shelf_read_complete">
+      <h2>
+        Belum selesai dibaca
+        <img width="30" src="assets/img/buku.png" alt="buku">
+      </h2>
+
+      <div id="incompleteBookshelfList" class="book_list">
+      </div>
+    </section>
+
+    <section class="book_shelf" id="book_shelf_read_incomplete">
+      <h2>
+        Selesai dibaca
+        <img width="30" src="assets/img/buku.png" alt="buku">
+
+      </h2>
+
+      <div id="completeBookshelfList" class="book_list">
+      </div>
+    </section>
+
+    <div class="popup">
+      <h3></h3>
+    </div>
+
+  </main>
+
+  <script src="assets/script/script.js"></script>
+
+</body>
+
+</html>

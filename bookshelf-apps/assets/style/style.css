@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+:root {
+    --backgorund: #eff0f4;
+    --skin: #538ae0;
+    --black: #777;
+    --white: #f0f0f0;
+    --shadow: 4px 4px 2px #d0d0d0,
+            -4px -4px 2px #f8f8f8;  
+
+    --inset-shadow: inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;
+    --red: #e76f51;
+    --background-black: #373839;
+    --shadow-black:  4px 4px 2px #2f3030,
+             -4px -4px 2px #3f4042;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--red);
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Viga', sans-serif;
+    background: var(--white);
+    transition: .5s ease-in-out;
+}
+
+input, button {
+    font-family: 'Viga', sans-serif;
+}
+
+input, button {
+    font-size: 16px;
+}
+
+.dark-mode {
+    background-color: var(--background-black);
+}
+
+#mode {
+    padding: 10px;
+    background-color: var(--red);
+    text-decoration: none;
+    color: var(--white);
+    border-radius: 10px;
+}
+
+.logo i{
+    font-size: 2.5em;
+    margin-left: 30rem;
+}
+
+.head_bar {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--white);
+    color: var(--black);
+    box-shadow: var(--shadow);
+}
+.head_bar.aktif {
+    background-color: var(--background-black);
+    box-shadow: var(--shadow-black);
+    color: #fff;
+}
+
+.head_bar__title {
+    cursor: pointer;
+}
+
+main {
+    max-width: 1000px;
+    width: 80%;
+    margin: 3rem auto;
+    padding: 16px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 15px;
+}
+
+.ilustrasi {
+    padding: 20px;
+}
+
+.ilustrasi img {
+    width: 100%;
+}
+
+.input_section {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.input_section.aktif {
+    box-shadow: var(--shadow-black);
+}
+
+.input_section > h2 {
+    text-align: center;
+    color: var(--red);
+}
+
+.input_section > form > .input {
+    margin: 8px 0;
+}
+
+.input_section > form > button {
+    background-color: var(--red);
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    padding: 8px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.input_section > form > button:hover {
+    box-shadow: 5px 5px 2px rgba(0,0,0,0.2);
+}
+
+.input_section > form > button > span {
+    font-weight: bold;
+}
+
+.input_section > form > .input > input {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    color: var(--black);
+    box-shadow: var(--inset-shadow);
+    background-color: var(--backgorund);
+}
+
+
+.input_section > form > .input > label {
+    color: var(--red);
+    font-weight: bold;
+}
+
+.input_section > form > .input_inline {
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+}
+
+.input_section > form > .input_inline > label {
+    color: var(--red);
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.search_section {
+    margin: 16px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    border-radius: 10px;
+}
+
+.book_shelf {
+    margin: 16px 0 0 0;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+.book_shelf.aktif {
+    background-color: var(--background-black);
+    box-shadow: var(--shadow-black);
+    color: #fff;
+}
+
+.book_shelf > h2 {
+    color: var(--red);
+}
+
+.book_shelf > .book_list {
+    padding: 16px;
+}
+
+.book_shelf > .book_list > .book_item {
+    padding: 8px 16px 16px 16px;
+    box-shadow: var(--shadow);
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+
+.book_shelf > .book_list > .book_item > h3, p {
+    margin: 8px 0;
+}
+
+.book_shelf > .book_list > .book_item > .action > button {
+    border: 0;
+    padding: 5px;
+    margin: 0 5px 0 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.salmon {
+    border: 2px solid var(--red);
+    color: var(--black);
+    padding: 10px;
+    outline: 0;
+    background: none;
+    transition: .3s;
+    cursor: pointer;
+}
+.salmon:hover {
+    background-color: var(--red);
+    color: #fff;
+}
+
+.trash-button {
+    width: 40px;
+    height: 40px;
+    padding: 12px;
+    background: url('../img/trash-outline.svg');
+    background-size: contain;
+    margin-left: 16px;
+    cursor: pointer;
+    border: none;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 20px;
+    background-color: var(--red);
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s ease-in-out;
+}
+
+.popup.aktif {
+    visibility: visible;
+    opacity: 1;
+}
+
+@media only screen and (max-width: 600px) {
+    main {
+        max-width: 1000px;
+        width: 100%;
+    }
+    .head_bar {
+        width: 100%;
+    }
+
+    .head_bar h1 {
+        font-size: 20px;
+    }
+
+    .input_section {
+        width: 100%;
+    }
+
+    .book_shelf {
+        width: 100%;
+    }
+    .logo i{
+        font-size: 1.5em;
+        margin-left: 10%;
+    }
+}
